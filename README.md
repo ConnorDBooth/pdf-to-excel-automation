@@ -23,9 +23,7 @@ It was originally built to reduce manual data entry time for laboratory staff by
 ```text
 src/
   main.py          # CLI / entry point
-  pdf_parser.py    # PDF extraction logic
-  excel_writer.py  # Excel export logic
-  utils.py         # helpers (logging, validation)
+  mold_processing.py    # PDF extraction logic
+  testing.py 
 samples/
-  sample_report.pdf
-  output_example.xlsx
+  Example.xlsx
