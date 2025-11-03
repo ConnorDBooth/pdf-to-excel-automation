@@ -3,7 +3,7 @@ Developed a Python automation script at Pinchin Ltd. that extracted data from PD
 
 # PDF to Excel Automation
 
-This project automates the workflow of taking structured data out of PDF field or environmental reports and exporting it into a clean Excel template for analysis and storage.
+This project automates the workflow of taking structured data out of PDF test results and turned the data into a clean Excel template for analysis and storage.
 
 It was originally built to reduce manual data entry time for laboratory staff by parsing common report formats and writing the results into spreadsheets.
 
