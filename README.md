@@ -1,31 +1,38 @@
-# pdf-to-excel-automation
-Developed a Python automation script at Pinchin Ltd. that extracted data from PDFs and exported it to Excel, significantly reducing manual data entry time.
-
 # PDF to Excel Automation
 
-This project automates the workflow of taking structured data out of PDF field or environmental reports and exporting it into a clean Excel template for analysis and storage.
+Developed a Python-based automation tool at Pinchin Ltd. to extract semi-structured data from laboratory and environmental PDF reports and populate standardized Excel templates for analysis and record keeping.
 
-It was originally built to reduce manual data entry time for laboratory staff by parsing common report formats and writing the results into spreadsheets.
+The tool replaces manual transcription workflows by parsing common report formats, validating extracted data, and computing summary statistics, significantly reducing data entry time and error rates for laboratory staff.
+
+Note: Real-world examples have been removed to protect client and company confidentiality.
 
 ## Features
-- Extracts tabular or semi-structured data from PDFs
-- Maps extracted fields to a defined Excel layout
-- Skips duplicate or malformed entries to protect data integrity
-- Logs processing results (success, skipped, errors)
-- Designed to be extended for new PDF templates
+- Extracts tabular and semi-structured data from PDF reports
+- Automatically identifies relevant report sections (e.g. Outdoor samples)
+- Maps extracted fields into a predefined Excel template
+- Computes summary statistics (mean, standard deviation, percentiles, frequency)
+- Handles missing, malformed, or duplicate entries to protect data integrity
+- User-friendly GUI for non-technical users
+- Designed to be extensible for new PDF templates
 
 ## Tech Stack
 - Python 3.x
-- PDF parsing: `pdfplumber` 
-- Excel writing: `openpyxl`
+- PDF parsing: pdfplumber
+- Excel automation: openpyxl
+- GUI: tkinter
+- Data validation and statistical analysis
 
 ## Project Structure
 ```text
 src/
-  main.py          # CLI / entry point
-  pdf_parser.py    # PDF extraction logic
-  excel_writer.py  # Excel export logic
-  utils.py         # helpers (logging, validation)
+  main.py          # GUI and application entry point
+  pdf_parser.py    # PDF table detection and extraction
+  excel_writer.py  # Excel population and statistics computation
 samples/
-  sample_report.pdf
-  output_example.xlsx
+  Example.xlsx
+```
+
+## Design Challenges
+- Handling inconsistent PDF table layouts across reports
+- Distinguishing between zero values and missing data
+- Dynamically inserting Excel columns without breaking existing formulas
